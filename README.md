@@ -9,3 +9,14 @@ To install `data-fatch-ts`, run the following command:
 npm install data-fatch-ts
 
 ```
+```bash
+bun install data-fatch-ts
+
+```
+
+## Dependencies
+This package does not have any external dependencies.
+
+## Changelog
+# v1.0.0
+##### Initial release with support for GET, POST, PUT, DELETE, and PATCH methods.
