@@ -85,7 +85,8 @@ import fetchData from 'data-fatch-ts';
 const data = async () => {
     const endpoint = 'https://jsonplaceholder.typicode.com/todos';
     const body = { 'name' : 'soumik', 'email' : `01754759169`, 'age' : '19' };
-    const res = await fetchData({ endpoint, method : 'POST', body });
+    const token = 'dsjlfjalkfjdalskdfjaskldfjklutwiueiweojflaskdjfasdfjsdfk_jsldfjskldfj' 
+    const res = await fetchData({ endpoint, method : 'PUT', body, token });
     console.log(res.length);
 }
 
@@ -94,9 +95,30 @@ If a token is required, you don't need to do a lot of work; just pass the token.
 
 
 
+## Recive your token
+
+``` bash 
+# extract token from headers
+const extractToken = (req, res, next) => {
+    const authHeader = req.headers['authorization'];
+
+    if (authHeader) {
+        const token = authHeader.split(' ')[1]; // Assuming 'Bearer <token>'
+        req.token = token; // Attach the token to the request object
+    } else {
+        req.token = null;
+    }
+
+    next();
+};
+```
+
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
 
 ## Maintainers
 Soumik Sarkar - ```ratulsarkar216@gmail.com ```
+
+## Like 
+If you like this package, please give it a star.
