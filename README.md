@@ -21,7 +21,7 @@ This package does not have any external dependencies.
 
 # v1.0.0
 
-Initial release with support for GET, POST, PUT, DELETE, and PATCH methods.
+- Initial release with support for GET, POST, PUT, DELETE, and PATCH methods.
 
 ## Benefits
 - **TypeScript Support**: Strong typing ensures better code quality and fewer runtime errors.
@@ -29,3 +29,24 @@ Initial release with support for GET, POST, PUT, DELETE, and PATCH methods.
 - **Token-based Authentication**: Easily include authorization tokens in your requests.
 - **Flexible Options**: Support for optional body and headers, making it adaptable to different API requirements.
 - **Caching Control**: Allows specifying caching strategies for improved performance.
+
+## API Doc
+
+`fetchData`
+
+# Parameters
+
+- `endpoin` : `string` -  The URL endpoint to send the request to.
+- `method` : `Methods` -  The HTTP method to use (`GET`, `POST`, `PUT`, `DELETE`, `PATCH`). Default is `GET`
+- `token` : `string` -  (optional) - The token for authorization (if required).
+- `body` : `string` -  (optional) - The body of the request. Required for `POST`, `PUT`, and `PATCH` methods.
+- `cash` : `cache` -  (optional) - The caching mode to use.
+
+# Returns
+- `Promise<any>` - A promise that resolves with the response data in JSON format.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## Maintainers
+Soumik Sarkar - ```ratulsarkar216@gmail.com ```
