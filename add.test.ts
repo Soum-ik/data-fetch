@@ -1,8 +1,11 @@
-import { add } from './src/server';
+import fetchData from "./src/server";
 
-test('adds two numbers correctly', () => {
-  const result = add(2, 3);
-  console.log(result);
-  
-  expect(result).toBe(5);
+
+
+test('testing my fetch api ', async () => {
+    const endpoint = "https://jsonplaceholder.typicode.com/todos/1"
+    const data = await fetchData({ endpoint, cash: "default", method: 'GET' })
+    console.log(data, "testing");
+
+    expect(data)
 })

@@ -1,13 +1,15 @@
 {
+  "name": "data-fatch-ts",
   "main": "./dist/server.js",
   "module": "./dist/server.mjs",
   "types": "./dist/server.d.ts",
+  "version": "1.5.0",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsup",
-      "test": "jest" 
+    "test": "jest" 
   },
   "repository": {
     "type": "git",
