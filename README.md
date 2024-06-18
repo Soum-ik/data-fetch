@@ -1,16 +1,16 @@
-# data-fatch-ts
+# data-fetch-ts
 
 ## Description
-`data-fatch-ts` is a TypeScript-based library for making HTTP requests with support for different methods (`GET`, `POST`, `PUT`, `DELETE`, `PATCH`). It simplifies fetching data from APIs by providing a unified interface for various HTTP methods and optional token-based authentication.
+`data-fetch-ts` is a TypeScript-based library for making HTTP requests with support for different methods (`GET`, `POST`, `PUT`, `DELETE`, `PATCH`). It simplifies fetching data from APIs by providing a unified interface for various HTTP methods and optional token-based authentication.
 
 ## Installation
-To install `data-fatch-ts`, run the following command:
+To install `data-fetch-ts`, run the following command:
 ```bash
-npm install data-fatch-ts
+npm install data-fetch-ts
 
 ```
 ```bash
-bun install data-fatch-ts
+bun install data-fetch-ts
 
 ```
 
@@ -52,7 +52,7 @@ Here is an example of using the fetchData function to fetch and log the length o
 # Simple Get Request
 
 ``` bash
-import fetchData from 'data-fatch-ts';
+import fetchData from 'data-fetch-ts';
 
 const data = async () => {
     const endpoint = 'https://jsonplaceholder.typicode.com/todos';
@@ -65,7 +65,7 @@ data();
 # Post Request
 
 ``` bash 
-import fetchData from 'data-fatch-ts';
+import fetchData from 'data-fetch-ts';
 
 const data = async () => {
     const endpoint = 'https://jsonplaceholder.typicode.com/todos';
@@ -80,7 +80,7 @@ when you use post request the body required
 # PUT Request
 
 ``` bash 
-import fetchData from 'data-fatch-ts';
+import fetchData from 'data-fetch-ts';
 
 const data = async () => {
     const endpoint = 'https://jsonplaceholder.typicode.com/todos';
