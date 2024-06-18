@@ -36,7 +36,7 @@ This package does not have any external dependencies.
 
 # Parameters
 
-- `endpoin` : `string` -  The URL endpoint to send the request to.
+- `endpoint` : `string` -  The URL endpoint to send the request to.
 - `method` : `Methods` -  The HTTP method to use (`GET`, `POST`, `PUT`, `DELETE`, `PATCH`). Default is `GET`
 - `token` : `string` -  (optional) - The token for authorization (if required).
 - `body` : `string` -  (optional) - The body of the request. Required for `POST`, `PUT`, and `PATCH` methods.
@@ -44,6 +44,56 @@ This package does not have any external dependencies.
 
 # Returns
 - `Promise<any>` - A promise that resolves with the response data in JSON format.
+
+## Usecase
+Here is an example of using the fetchData function to fetch and log the length of the data:
+
+
+# Simple Get Request
+
+``` bash
+import fetchData from 'data-fatch-ts';
+
+const data = async () => {
+    const endpoint = 'https://jsonplaceholder.typicode.com/todos';
+    const res = await fetchData({ endpoint });
+    console.log(res.length);
+};
+
+data();
+```
+# Post Request
+
+``` bash 
+import fetchData from 'data-fatch-ts';
+
+const data = async () => {
+    const endpoint = 'https://jsonplaceholder.typicode.com/todos';
+    const body = { 'name' : 'soumik', 'email' : `01754759169`, };
+    const res = await fetchData({ endpoint, method : 'POST', body });
+    console.log(res.length);
+}
+
+```
+when you use post request the body required 
+
+# PUT Request
+
+``` bash 
+import fetchData from 'data-fatch-ts';
+
+const data = async () => {
+    const endpoint = 'https://jsonplaceholder.typicode.com/todos';
+    const body = { 'name' : 'soumik', 'email' : `01754759169`, 'age' : '19' };
+    const res = await fetchData({ endpoint, method : 'POST', body });
+    console.log(res.length);
+}
+
+```
+if token needed you don't need to do lot's work just pass the token
+
+
+
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
