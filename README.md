@@ -90,7 +90,7 @@ const data = async () => {
 }
 
 ```
-if token needed you don't need to do lot's work just pass the token
+If a token is required, you don't need to do a lot of work; just pass the token. <b> Authorization </b> and <b> Bearer </b> are already set, so you just need to pass the token.
 
 
 
