@@ -18,5 +18,14 @@ bun install data-fatch-ts
 This package does not have any external dependencies.
 
 ## Changelog
+
 # v1.0.0
-##### Initial release with support for GET, POST, PUT, DELETE, and PATCH methods.
+
+Initial release with support for GET, POST, PUT, DELETE, and PATCH methods.
+
+## Benefits
+- **TypeScript Support**: Strong typing ensures better code quality and fewer runtime errors.
+- **Unified Interface**: Simplifies HTTP requests by providing a single function to handle various methods.
+- **Token-based Authentication**: Easily include authorization tokens in your requests.
+- **Flexible Options**: Support for optional body and headers, making it adaptable to different API requirements.
+- **Caching Control**: Allows specifying caching strategies for improved performance.
