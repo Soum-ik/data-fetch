@@ -1,9 +1,9 @@
 {
-  "name": "data-fatch-ts",
+  "name": "data-fetch-ts",
   "main": "./dist/server.js",
   "module": "./dist/server.mjs",
   "types": "./dist/server.d.ts",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "files": [
     "dist"
   ],
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Soum-ik/data-fatch.git"
+    "url": "git+https://github.com/Soum-ik/data-fetch.git"
   },
   "keywords": [
     "data-fetch",
