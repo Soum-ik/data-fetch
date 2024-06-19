@@ -19,7 +19,7 @@ This package does not have any external dependencies.
 
 ## Changelog
 
-# v1.0.0
+# v1.5.2
 
 - Initial release with support for GET, POST, PUT, DELETE, and PATCH methods.
 
