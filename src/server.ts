@@ -1,5 +1,3 @@
-"use server";
-
 type Methods = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
 type cache = 'default' | `force-cache` | `no-cache` | `no-store ` | `only-if-cached` | `reload`
 
@@ -31,7 +29,7 @@ const fetchData = async <M extends Methods>({ endpoint, method = 'GET', token, b
     };
 
     if (token) {
-        headers['Authorization'] = `Bearer ${token}`;
+        headers['authorization'] = `Bearer ${token}`;
     }
 
     const fetchOptions: RequestInit = {
@@ -43,9 +41,13 @@ const fetchData = async <M extends Methods>({ endpoint, method = 'GET', token, b
         fetchOptions.body = JSON.stringify(body);
     }
 
-    const response = await fetch(endpoint, fetchOptions);
-
-    return response.json();
+    try {
+        const response = await fetch(endpoint, fetchOptions);
+        const data = await response.json();
+        return { data, error: null };
+    } catch (error) {
+        return { data: null, error };
+    }
 };
 
 export default fetchData
