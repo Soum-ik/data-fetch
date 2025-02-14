@@ -11,7 +11,6 @@ npm install data-fetch-ts
 ```
 ```bash
 bun install data-fetch-ts
-
 ```
 
 ## Dependencies
